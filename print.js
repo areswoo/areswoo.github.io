@@ -5,7 +5,6 @@ function printMain(){
     }
     function afterPrint(original){
         document.body.innerHTML = original;
-        console.log(original);
     }
     window.onbeforeprint = beforePrint;
     window.print();
