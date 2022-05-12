@@ -1,14 +1,13 @@
 function printMain(){
-    const initPage = document.body.outerHTML;
-    console.log(initPage);
+    const initPage = document.body.innerHTML;
     function beforePrint(){
         document.body.innerHTML = document.getElementsByTagName("main")[0].outerHTML;
     }
-    function afterPrint(){
-        document.body.innerHTML = initPage;
+    function afterPrint(original){
+        document.body.innerHTML = original;
+        console.log(original);
     }
     window.onbeforeprint = beforePrint;
     window.print();
-    console.log(window.onafterprint = afterPrint);
-    console.log(initPage);
+    window.onafterprint = afterPrint(initPage);
 }
