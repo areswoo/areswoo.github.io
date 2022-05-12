@@ -1,10 +1,10 @@
 function printMain(){
     const initPage = document.body.outerHTML;
     function beforePrint(){
-        document.body.outerHTML = document.getElementsByTagName("main")[0].innerHTML;
+        document.body.innerHTML = document.getElementsByTagName("main")[0].outerHTML;
     }
     function afterPrint(){
-        document.body.outerHTML = initPage;
+        document.body.innerHTML = initPage;
     }
     window.onbeforeprint = beforePrint;
     window.print();
