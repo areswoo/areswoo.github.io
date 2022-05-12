@@ -1,5 +1,6 @@
 function printMain(){
     const initPage = document.body.outerHTML;
+    console.log(initPage);
     function beforePrint(){
         document.body.innerHTML = document.getElementsByTagName("main")[0].outerHTML;
     }
@@ -8,5 +9,6 @@ function printMain(){
     }
     window.onbeforeprint = beforePrint;
     window.print();
-    window.onafterprint = afterPrint;
+    console.log(window.onafterprint = afterPrint);
+    console.log(initPage);
 }
