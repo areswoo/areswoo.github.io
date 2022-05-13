@@ -5,19 +5,47 @@
     margin:0;
     padding:0;
     border:0;
+    font-family:'Roboto', sans-serif;
+}
+@media print{
+    .Letter{
+        width:21.6cm;
+        height:27.9cm;
+    }
+    .A3{
+        width:29.7cm;
+        height:42cm;
+    }
+    .A4{
+        width:21cm;
+        height:29.7cm;
+    }
+    .A5{
+        width:14.8cm;
+        height:21cm;
+    }
 }
 body{
     background-color:gray;
 }
 header{
+    color:white;
     background-color:rgb(26,26,26);
     height:30px;
 }
+header > button{
+    color:white;
+    background-color:rgb(26,26,26);
+    line-height:30px;
+    font-size:16px;
+}
 main{
     margin:0 auto;
-    width:1200px;
     background-color:white;
 }
 footer{
     background-color:blue;
+}
+.name > i{
+    font-size:60px;
 }
