@@ -7,6 +7,10 @@
     border:0;
     font-family:'Roboto', sans-serif;
 }
+a:visited, a:active, a{
+    text-decoration:none;
+    color:black;
+}
 @media print{
     .Letter{
         width:21.6cm;
@@ -41,11 +45,32 @@ header > button{
 }
 main{
     margin:0 auto;
+    width:1200px;
     background-color:white;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+#profile{
+    height:200px;
+    display:grid;
+    grid-template-columns:200px 1fr;
+    grid-template-rows:repeat(5, 1fr);
+}
+#profile > div{
+    display:flex;
+    align-items:center;
+}
+#profile > .__name{
+    justify-items:center;
+    text-align:center;
+}
+#profile > .profile:nth-child(1){
+    grid-column-start:1;
+    grid-column-end:1;
+    grid-row-start:1;
+    grid-row-end:6;
 }
 footer{
     background-color:blue;
-}
-.name > i{
-    font-size:60px;
 }
