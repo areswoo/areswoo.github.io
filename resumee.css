@@ -54,7 +54,7 @@ main{
 #profile{
     height:150px;
     display:grid;
-    background-image:linear-gradient(to bottom right, rgba(199,255,186,1), rgba(199,255,186,0));
+    /*background-image:linear-gradient(to bottom right, rgba(199,255,186,1), rgba(199,255,186,0));*/
     grid-template-columns:200px 1fr;
     grid-template-rows:repeat(5, 1fr);
 }
