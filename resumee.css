@@ -30,6 +30,41 @@ a:visited, a:active, a{
     }
 }
 body{
+    height:100vh;
+}
+#menu{
+    height:25px;
+}
+#resumee{
+    height:calc(100% - 50px);
+    width:1200px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+}
+#profile{
+    height:15%;
+    width:100%;
+    text-align:center;
+}
+#content{
+    display:flex;
+    height:85%;
+    width:100%;
+}
+aside{
+    height:100%;
+    width:30%;
+}
+main{
+    height:100%;
+    width:70%;
+}
+footer{
+    height:25px;
+}
+
+/*body{
     background-color:gray;
 }
 header{
@@ -55,7 +90,7 @@ main{
     height:150px;
     display:grid;
     /*background-image:linear-gradient(to bottom right, rgba(199,255,186,1), rgba(199,255,186,0));*/
-    grid-template-columns:200px 1fr;
+   /* grid-template-columns:200px 1fr;
     grid-template-rows:repeat(5, 1fr);
 }
 #profile > div{
@@ -74,4 +109,4 @@ main{
 }
 footer{
     background-color:blue;
-}
+}*/

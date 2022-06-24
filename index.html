@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="chart.js"></script>
+    <!--<script src="chart.js"></script>-->
     <script src="print.js"></script>
     <script src="https://kit.fontawesome.com/7c34f58672.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <div id="menu">
         <label for="print_size">Print Size</label>
         <select name="print_size" id="print_size">
             <option value="Letter">Letter</option>
@@ -22,8 +22,90 @@
             <option value="A5">A5</option>
         </select>
         <button onclick="printMain();"><i class="fa-solid fa-print"></i></button>
-    </header>
-    <main>
+    </div>
+    <div id="resumee">
+        <div id="profile">
+            <header>
+                <h1>Dongwoo Kim</h1>
+                <p><a href="https://www.google.com/maps/place/Dream+Lagoons,+66604+Ciudad+Apodaca,+%EB%88%84%EC%97%90%EB%B3%B4+%EB%A0%88%EC%98%A8/@25.7680804,-100.2097557,18z/data=!3m1!4b1!4m5!3m4!1s0x8662eb8381a83f2f:0x977858ac9b1e2895!8m2!3d25.7679782!4d-100.2102532">Rio Tuxpan 314B, Dream Lagoons,<br> Apodaca, Nuevo Leon, Mexico 66604</a></p>
+                <p><a href="https://wa.me/+528130977120">+(52)81-3097-7120</a></p>
+                <p><a href="mailto:admin@koreamex.com">admin@koreamex.com</a></p>
+            </header>
+        </div>
+        <div id="content">
+            <aside>
+                <div id="skills">
+                    <h2>SKILLS</h2>
+                    <h3>Programming Language</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>SQL</li>
+                    </ul>
+                    
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <h3>Operating System</h3>
+                    <ul>
+                        <li>Windows</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div id="software">
+                    <h2>SOFTWARE</h2>
+                    <ul>
+                        <li>Excel</li>
+                        <li>Visual Studio</li>
+                        <li>Visual Studio Code</li>
+                        <li>GitHub</li>
+                        <li>Amazon Web Srvices</li>
+                        <li>Google Cloud Platform</li>
+                        <li>MATLAB</li>
+                        <li>Solidworks</li>
+                    </ul>
+                </div>
+                <div id="language">
+                    <ul>
+                        <li>Korean</li>
+                        <li>English</li>
+                        <li>Spanish</li>
+                    </ul>
+                </div>
+            </aside>
+            <main>
+                <div id="introduction">
+                    <h2>Profile</h2>
+
+                </div>
+                <div id="experience">
+                    <h2>Work Experience</h2>
+                    <h3>KIA Mexico</h3>
+                    <h3>Yushin America Inc.</h3>
+                    <h3>CS Central America</h3>
+                </div>
+                <div id="education">
+                    <h2>Education</h2>
+                    <h3>Johnson & Wales University</h3>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer>
+        ⓒ 2022. DONGWOO KIM all rights reserved.
+    </footer>
+
+
+
+
+
+    <!--<main>
         <div id="profile">
             <div class="profile __name">
                 <h1>
@@ -115,7 +197,6 @@
         </div>
     </main>
     <footer>
-        ⓒ 2022. DONGWOO KIM all rights reserved.
-    </footer>
+    </footer>-->
 </body>
 </html>

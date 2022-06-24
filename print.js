@@ -5,8 +5,8 @@ function printMain() {
 
 
     function beforePrint() {
-        document.body.innerHTML = document.getElementsByTagName("main")[0].outerHTML;
-        document.getElementsByTagName("main")[0].classList.add(value);
+        document.body.innerHTML = document.getElementById("resumee").outerHTML;
+        document.getElementById("resumee").classList.add(value);
     }
     function afterPrint() {
         document.body.innerHTML = initPage;
