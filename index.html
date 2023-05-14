@@ -8,195 +8,242 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!--<script src="chart.js"></script>-->
-    <script src="print.js"></script>
     <script src="https://kit.fontawesome.com/7c34f58672.js" crossorigin="anonymous"></script>
+    <script src="resumee.js"></script>
+    <script src="data.js"></script>
 </head>
 <body>
-    <div id="menu">
-        <label for="print_size">Print Size</label>
-        <select name="print_size" id="print_size">
-            <option value="Letter">Letter</option>
-            <option value="A3">A3</option>
-            <option value="A4">A4</option>
-            <option value="A5">A5</option>
-        </select>
-        <button onclick="printMain();"><i class="fa-solid fa-print"></i></button>
-    </div>
-    <div id="resumee">
-        <div id="profile">
-            <header>
-                <h1>Dongwoo Kim</h1>
-                <p><a href="https://www.google.com/maps/place/Dream+Lagoons,+66604+Ciudad+Apodaca,+%EB%88%84%EC%97%90%EB%B3%B4+%EB%A0%88%EC%98%A8/@25.7680804,-100.2097557,18z/data=!3m1!4b1!4m5!3m4!1s0x8662eb8381a83f2f:0x977858ac9b1e2895!8m2!3d25.7679782!4d-100.2102532">Rio Tuxpan 314B, Dream Lagoons,<br> Apodaca, Nuevo Leon, Mexico 66604</a></p>
-                <p><a href="https://wa.me/+528130977120">+(52)81-3097-7120</a></p>
-                <p><a href="mailto:admin@koreamex.com">admin@koreamex.com</a></p>
-            </header>
+    <nav id="nav">
+        <div id="lang">
+            <label for="language"><i class="fa-solid fa-globe"></i></label>
+            <select id="language" name="language" onchange="selectLang()">
+                <option value="es">
+                    Espanol
+                </option>
+                <option value="en">
+                    English
+                </option>
+            </select>
         </div>
+    </nav>
+    <main id="main">
+        <aside id="aside">
+            <div id="con_profile" class="containers">
+                <img src="dongwoo.jpg" alt="Profile picture" width="150px" height="150px">
+            </div>
+            <div id="con_language" class="containers">
+                <div id="t_language" class="titles">
+
+                </div>
+                <div id="res_lang1" class="languages">
+
+                </div>
+                <div id="res_lang2" class="languages">
+
+                </div>
+                <div id="res_lang3" class="languages">
+
+                </div>
+            </div>
+            <div id="con_aptitude" class="containers">
+                <div id="t_aptitude" class="titles">
+                </div>
+                <div id="res_apt1" class="aptitudes">
+
+                </div>
+                <div id="res_apt2" class="aptitudes">
+
+                </div>
+                <div id="res_apt3" class="aptitudes">
+
+                </div>
+                <div id="res_apt4" class="aptitudes">
+
+                </div>
+            </div>
+            <div id="con_skills" class="containers">
+                <div id="t_skills" class="titles">
+                </div>
+                <div id="res_skill01" class="skills">
+
+                </div>
+                <div id="res_skill02" class="skills">
+
+                </div>
+                <div id="res_skill03" class="skills">
+
+                </div>
+                <div id="res_skill04" class="skills">
+
+                </div>
+                <div id="res_skill05" class="skills">
+
+                </div>
+                <div id="res_skill06" class="skills">
+
+                </div>
+                <div id="res_skill07" class="skills">
+
+                </div>
+                <div id="res_skill08" class="skills">
+
+                </div>
+                <div id="res_skill09" class="skills">
+
+                </div>
+                <div id="res_skill10" class="skills">
+
+                </div>
+                <div id="res_skill11" class="skills">
+
+                </div>
+                <div id="res_skill12" class="skills">
+
+                </div>
+                <div id="res_skill13" class="skills">
+
+                </div>
+                <div id="res_skill14" class="skills">
+
+                </div>
+                <div id="res_skill15" class="skills">
+
+                </div>
+            </div>
+        </aside>
         <div id="content">
-            <aside>
-                <div id="skills">
-                    <h2>SKILLS</h2>
-                    <h3>Programming Language</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>PHP</li>
-                        <li>Python</li>
-                        <li>Javascript</li>
-                        <li>SQL</li>
-                    </ul>
-                    
-                    <h3>Web Development</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
-                    <h3>Operating System</h3>
-                    <ul>
-                        <li>Windows</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
-                <div id="software">
-                    <h2>SOFTWARE</h2>
-                    <ul>
-                        <li>Excel</li>
-                        <li>Visual Studio</li>
-                        <li>Visual Studio Code</li>
-                        <li>GitHub</li>
-                        <li>Amazon Web Srvices</li>
-                        <li>Google Cloud Platform</li>
-                        <li>MATLAB</li>
-                        <li>Solidworks</li>
-                    </ul>
-                </div>
-                <div id="language">
-                    <ul>
-                        <li>Korean</li>
-                        <li>English</li>
-                        <li>Spanish</li>
-                    </ul>
-                </div>
-            </aside>
-            <main>
-                <div id="introduction">
-                    <h2>Profile</h2>
+            <div id="con_personal" class="containers">
+                <div id="res_name">
 
                 </div>
-                <div id="experience">
-                    <h2>Work Experience</h2>
-                    <h3>KIA Mexico</h3>
-                    <h3>Yushin America Inc.</h3>
-                    <h3>CS Central America</h3>
+            </div>
+            <div id="con_contact" class="containers">
+                <div id="res_web">
+
                 </div>
-                <div id="education">
-                    <h2>Education</h2>
-                    <h3>Johnson & Wales University</h3>
+                <div id="res_email">
+
                 </div>
-            </main>
-        </div>
-    </div>
-    <footer>
-        ⓒ 2022. DONGWOO KIM all rights reserved.
-    </footer>
+                <div id="res_phone">
 
+                </div>
+            </div>
+            <div id="con_summary" class="containers">
+                <div id="t_summary" class="titles">
+                </div>
+                <div id="res_summary">
 
+                </div>
+            </div>
+            <div id="con_experience" class="containers">
+                <div id="t_experience" class="titles">
 
+                </div>
+                <div id="company1" class="companies">
+                    <div id="res_cname1" class="cname">
+    
+                    </div>
+                    <div id="res_clocation1" class="cloc">
+    
+                    </div>
+                    <div id="res_cposition1" class="cpos">
+    
+                    </div>
+                    <div id="res_cdate1" class="cdate">
+    
+                    </div>
+                    <div id="res_c1job1" class="cjob">
+    
+                    </div>
+                    <div id="res_c1job2" class="cjob">
+    
+                    </div>
+                    <div id="res_c1job3" class="cjob">
+    
+                    </div>
+                    <div id="res_c1job4" class="cjob">
+    
+                    </div>
+                </div>
+                <div id="company2" class="companies">
+                    <div id="res_cname2" class="cname">
+    
+                    </div>
+                    <div id="res_cposition2" class="cpos">
+    
+                    </div>
+                    <div id="res_cdate2"class="cdate">
+    
+                    </div>
+                    <div id="res_c2job1" class="cjob">
+    
+                    </div>
+                    <div id="res_c2job2" class="cjob">
+    
+                    </div>
+                    <div id="res_c2job3" class="cjob">
+    
+                    </div>
+                    <div id="res_c2job4" class="cjob">
+    
+                    </div>
+                </div>
+                <div id="company3" class="companies">
+                    <div id="res_cname3" class="cname">
+    
+                    </div>
+                    <div id="res_clocation3" class="cloc">
+    
+                    </div>
+                    <div id="res_cposition3" class="cpos">
+    
+                    </div>
+                    <div id="res_cdate3" class="cdate">
+    
+                    </div>
+                    <div id="res_c3job1" class="cjob">
+    
+                    </div>
+                    <div id="res_c3job2" class="cjob">
+    
+                    </div>
+                </div>
+            </div>
+            <div id="con_education" class="containers">
+                <div id="t_education" class="titles">
 
-
-    <!--<main>
-        <div id="profile">
-            <div class="profile __name">
-                <h1>
-                    <i class="fa-solid fa-address-card"></i>
-                    DONGWOO KIM
-                </h1>
+                </div>
+                <div id="university1" class="universities">
+                    <div id="res_uname" class="uname">
+    
+                    </div>
+                    <div id="res_ulocation" class="uloc">
+    
+                    </div>
+                    <div id="res_utitle1" class="utitle">
+    
+                    </div>
+                    <div id="res_ugpa1" class="ugpa">
+    
+                    </div>
+                    <div id="res_udate1" class="udate">
+    
+                    </div>
+                    <div id="res_utitle2" class="utitle">
+    
+                    </div>
+                    <div id="res_ugpa2" class="ugpa">
+    
+                    </div>
+                    <div id="res_udate2" class="udate">
+    
+                    </div>
+                </div>
             </div>
-            <div class="profile __address">
-                <h3>
-                    <i class="fa-solid fa-location-dot"></i>
-                    Rio Tuxpan 314B, Dream Lagoons, Apodaca, Nuevo Leon, Mexico
-                </h3>
-            </div>
-            <div class="profile __phone">
-                <h3>
-                    <i class="fa-solid fa-phone"></i>
-                    +528130977120
-                </h3>
-            </div>
-            <div class="profile __whatsapp">
-                <h3>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <a href="https://wa.me/+528130977120">WHATSAPP</a>
-                </h3>
-            </div>
-            <div class="profile __email">
-                <h3>
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:admin@koreamex.com">admin@koreamex.com</a>
-                </h3>
-            </div>
-            <div class="profile __summary">
-                <h3>"self intro"</h3>
-            </div>
-        </div>
-        <div id="experience">
-            <ul class="experience">
-                <h2><i class="fa-solid fa-briefcase"></i>Work Experience</h2>
-                <li>KIA Mexico</li>
-                <li>Yushin America</li>
-                <li>CS Central America</li>
-            </ul>
-        </div>
-        <div id="education">
-            <div class="education">
-                <table>
-                    <tr>
-                        <th colspan="6"><h2><i class="fa-solid fa-school"></i>Education</h2></th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">Johnson & Wales University</th>
-                        <td rowspan="2">Providence, RI</td>
-                        <td>2017</td>
-                        <td>B.S Electronics Engineering</td>
-                        <td rowspan="2">Overall GPA</td>
-                        <td rowspan="2">3.30</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>A.S Robotics Engineering</td>
-                    </tr>
-                </table>                
-            </div>
-        </div>
-        <div id="skills">
-            <ul class="skills">
-                <h2><i class="fa-solid fa-screwdriver-wrench"></i>Skills</h2>
-                <li>Programming Language : C, C++, C#, Javascript, PHP, Python</li>
-                <li>Web Development : HTML, CSS</li>
-                <li>Operating System : Windows, Linux</li>
-            </ul>    
-        </div>
-        <div id="software">
-            <ul class="software">
-                <h2><i class="fa-solid fa-computer"></i>Software</h2>
-                <li>Visual Studio</li>
-                <li>Visual Studio Code</li>
-                <li>Microsoft Office</li>
-                <li>Solidworks</li>
-            </ul>
-        </div>
-        <div id="language">
-            <ul class="language">
-                <h2><i class="fa-solid fa-language"></i>Languages</h2>
-                <li>Korean</li>
-                <li>Enlgish</li>
-                <li>Spanish</li>
-            </ul>
         </div>
     </main>
-    <footer>
-    </footer>-->
+    <footer id="footer">
+
+    </footer>
 </body>
 </html>
