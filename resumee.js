@@ -1,6 +1,22 @@
 window.onload = function () {
     var initLang = getLang();
-    changeLang(initLang);
+
+    if(initLang == "es"){
+        document.getElementById("language").options.selectedIndex = 0;
+        changeLang("es");
+    }
+    else if(initLang == "en"){
+        document.getElementById("language").options.selectedIndex = 1;
+        changeLang("en");
+    }
+    else if(initLang == "ko"){
+        document.getElementById("language").options.selectedIndex = 2;
+        changeLang("ko");
+    }
+    else{
+        document.getElementById("language").options.selectedIndex = 1;
+        changeLang("en");
+    }
 }
 
 function selectLang(){
@@ -27,14 +43,14 @@ function changeLang(lang) {
             document.getElementById(items[i]).innerHTML = txt_eng[i];
         }
     }
-    /*else if(lang == "ko"){
+    else if(lang == "ko"){
         for(var i = 0; i < titles.length; i++){
             document.getElementById(titles[i]).innerHTML = titles_kor[i];
         }
         for(var i = 0; i < items.length; i++){
             document.getElementById(items[i]).innerHTML = txt_kor[i];
         }
-    }*/
+    }
     else {
         for (var i = 0; i < titles.length; i++) {
             document.getElementById(titles[i]).innerHTML = titles_eng[i];
@@ -60,4 +76,21 @@ function getLang() {
     else {
         return "en";
     }
+}
+
+function printMain() {
+    const initPage = document.body.innerHTML;
+
+    function beforePrint() {
+        document.getElementById("nav").remove();
+        document.getElementById("main").style.height = "100vh";
+    }
+
+    function afterPrint() {
+        document.body.innerHTML = initPage;
+    }
+
+    window.addEventListener('beforeprint', beforePrint);
+    window.print();
+    window.addEventListener('afterprint', afterPrint());
 }
