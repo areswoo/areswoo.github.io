@@ -1,191 +1,464 @@
-*{
-    margin:0;
-    padding: 0;
-    text-decoration: none;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    box-sizing:border-box;
-    font-family:'Roboto', sans-serif;
-    font-size:0.9rem;
-}
-body {
-    background-color: black;
-    height:100vh;
-}
-nav{
-    background-color: #332e2e;
-    color: white;
-    height: 50px;
-    width:100%;
-    display:flex;
-}
-#lang{
-    width:150px;
-    display:flex;
-}
-#main{
-    width:1200px;
-    background-color: #fbf5f5;
-    display:flex;
-    height:calc(100% - 50px);
-    margin:0 auto;
-}
-#aside{
-    width:300px;
-    background-color: #cac0e5;
-    display:flex;
-    flex-direction:column;
-}
-#content{
-    display:flex;
-    flex-wrap:wrap;
-    width:900px;
-    align-items:center;
-}
-.titles{
-    font-size: 1.5em;
-    width:100%;
-    display:flex;
-    align-items: center;
-    padding-left:20px;
-    font-weight:900;
-}
-.containers{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-}
-.languages{
-    height:30px;
-    margin:0px 5px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding:0px 10px;
-    background-color:#4f64ae;
-    color:#fbf5f5;
-    border-radius:30px;
-}
-.aptitudes{
-    height:30px;
-    margin:0px 5px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding:0px 10px;
-    background-color:#4f64ae;
-    color:#fbf5f5;
-    border-radius:30px;
-}
-.skills{
-    height:30px;
-    margin:0px 5px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding:0px 10px;
-    background-color:#4f64ae;
-    color:#fbf5f5;
-    border-radius:30px;
-}
-.companies{
-    display:flex;
-    align-items: center;
-    flex-wrap:wrap;
-    padding:5px 20px;
-}
-.cname{
-    display:flex;
-    width:70%;
-    font-weight:700;
-}
-.cloc{
-    display:flex;
-    width:30%;
-}
-.cpos{
-    display:flex;
-    width:70%
-}
-.cdate{
-    display:flex;
-    width:30%;
-}
-.cjob{
-    display:flex;
-    width:100%;
-}
-.universities{
-    display:flex;
-    align-items: center;
-    flex-wrap:wrap;
-    padding:5px 20px;
-}
-.uname{
-    display:flex;
-    width:70%;
-    font-weight:700;
-}
-.uloc{
-    display:flex;
-    width:30%;
-}
-.utitle{
-    display:flex;
-    width:70%;
-}
-.ugpa{
-    display:flex;
-    width:15%;
-}
-.udate{
-    display:flex;
-    width:15%;
-}
-#con_language{
-    height:18%;
-    align-items: center;
-    justify-content: center;
-}
-#con_aptitude{
-    height:27%;
-    align-items: center;
-    justify-content: center;
-}
-#con_skills{
-    height:45%;
-    align-items: center;
-    justify-content: center;
+@media only screen and (min-width: 900px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border:0;
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+    }
+
+    body {
+        background-color: black;
+        height: 100vh;
+    }
+
+    nav {
+        background-color: #332e2e;
+        color: white;
+        height: 50px;
+        min-width: 1200px;
+        display: flex;
+    }
+
+    nav>div {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #lang>label {
+        width: 20px;
+    }
+
+    #printer>i {
+        cursor: pointer;
+    }
+
+    #main {
+        width: 1200px;
+        background-color: #fbf5f5;
+        display: grid;
+        height: calc(100% - 50px);
+        margin: 0 auto;
+        grid-template-areas:'aside header' 'aside content';
+    }
+
+    #header{
+        grid-area:header;
+        display:flex;
+        width:900px;
+        align-items:center;
+        justify-content: center;
+    }
+
+    #aside {
+        width: 300px;
+        background-color: #cac0e5;
+        display: flex;
+        flex-direction: column;
+        grid-area:aside;
+    }
+
+    #content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 900px;
+        align-items: center;
+        grid-area:content;
+    }
+
+    .titles {
+        font-size: 1.5em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-weight: 900;
+    }
+
+    .containers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .languages {
+        height: 30px;
+        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        background-color: #4f64ae;
+        color: #fbf5f5;
+        border-radius: 30px;
+    }
+
+    .aptitudes {
+        height: 30px;
+        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        background-color: #4f64ae;
+        color: #fbf5f5;
+        border-radius: 30px;
+    }
+
+    .skills {
+        height: 30px;
+        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        background-color: #4f64ae;
+        color: #fbf5f5;
+        border-radius: 30px;
+    }
+
+    .companies {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px 20px;
+    }
+
+    .cname {
+        display: flex;
+        width: 70%;
+        font-weight: 700;
+    }
+
+    .cloc {
+        display: flex;
+        width: 30%;
+    }
+
+    .cpos {
+        display: flex;
+        width: 70%
+    }
+
+    .cdate {
+        display: flex;
+        width: 30%;
+    }
+
+    .cjob {
+        display: flex;
+        width: 100%;
+    }
+
+    .universities {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 5px 20px;
+        width: 100%;
+    }
+
+    .uname {
+        display: flex;
+        width: 70%;
+        font-weight: 700;
+    }
+
+    .uloc {
+        display: flex;
+        width: 30%;
+    }
+
+    .utitle {
+        display: flex;
+        width: 70%;
+    }
+
+    .ugpa {
+        display: flex;
+        width: 15%;
+    }
+
+    .udate {
+        display: flex;
+        width: 15%;
+    }
+
+    #con_language {
+        height: 18%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #con_aptitude {
+        height: 27%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #con_skills {
+        height: 45%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #con_profile {
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #con_profile>img {
+        border-radius: 50%;
+        border: 3px solid #4f64ae;
+    }
+
+    #con_personal {
+        height: 60px;
+        width: 70%;
+    }
+
+    #con_contact {
+        height: 60px;
+        width: 30%;
+        flex-direction: column;
+    }
+
+    #con_personal {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #res_name {
+        font-size: 3em;
+    }
+
+    #res_summary {
+        padding: 5px 20px;
+    }
 }
 
-#con_profile{
-    height:200px;
-    justify-content: center;
-    align-items: center;
-}
-#con_profile > img{
-    border-radius: 50%;
-    border: 3px solid #4f64ae;
-}
+@media only screen and (max-width: 899px) {
+    *{
+        margin: 0;
+        padding: 0;
+        border:0;
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+    }
+    nav{
+        display:none;
+    }
+    #main{
+        display:flex;
+        flex-direction:column;
+    }
+    #con_profile {
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+    }
 
-#con_personal{
-    height:60px;
-    width:70%;
-}
-#con_contact{
-    height:60px;
-    width:30%;
-    flex-direction:column;
-}
-#con_personal{
-    align-items: center;
-    justify-content: center;
-}
-#res_name{
-    font-size:3em;
-}
-#res_summary{
-    padding: 5px 20px;
+    #header{
+        order:1;
+        background-color: #332e2e;
+        color:#fbf5f5;
+        display:flex;
+        position:sticky;
+        top:0;
+        height:100px;
+        flex-direction:column;
+        justify-content: center;
+    }
+    #con_personal{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #con_contact{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #res_name{
+        font-size:2rem;
+    }
+    #aside{
+        order:2;
+        height:calc(100vh - 100px);
+    }
+
+    #content{
+        order:3;
+    }
+    #con_profile{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #con_profile>img {
+        border-radius: 50%;
+        border: 3px solid #4f64ae;
+    }
+    
+    .containers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #con_language {
+        height: 12%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #con_aptitude {
+        height: 18%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #con_skills {
+        height: 30%;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .titles {
+        font-size: 1.5em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-weight: 900;
+    }
+
+    .languages {
+        height: 30px;
+        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        background-color: #4f64ae;
+        color: #fbf5f5;
+        border-radius: 30px;
+    }
+    
+    .aptitudes {
+        height: 30px;
+        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        background-color: #4f64ae;
+        color: #fbf5f5;
+        border-radius: 30px;
+    }
+
+    .skills {
+        height: 30px;
+        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        background-color: #4f64ae;
+        color: #fbf5f5;
+        border-radius: 30px;
+    }
+
+    #res_summary {
+        padding: 5px 20px;
+    }
+
+    .companies {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px 20px;
+    }
+
+    .cname {
+        display: flex;
+        width:70%;
+        font-weight: 700;
+    }
+
+    .cloc {
+        display: flex;
+        width: 30%;
+    }
+
+    .cpos {
+        display: flex;
+        width: 70%
+    }
+
+    .cdate {
+        display: flex;
+        width: 30%;
+    }
+
+    .cjob {
+        display: flex;
+        width: 100%;
+    }
+
+    .universities {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 5px 20px;
+        width: 100%;
+    }
+
+    .uname {
+        display: flex;
+        width: 70%;
+        font-weight: 700;
+    }
+
+    .uloc {
+        display: flex;
+        width: 30%;
+    }
+
+    .utitle {
+        display: flex;
+        width: 70%;
+    }
+
+    .ugpa {
+        display: flex;
+        width: 15%;
+    }
+
+    .udate {
+        display: flex;
+        width: 15%;
+    }
+
 }
